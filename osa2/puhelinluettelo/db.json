@@ -1,0 +1,54 @@
+{
+  "persons": [
+    {
+      "name": "Arto Hellas",
+      "number": "040-123456",
+      "id": 1
+    },
+    {
+      "name": "Ada Lovelace",
+      "number": "39-44-5323523",
+      "id": 2
+    },
+    {
+      "name": "Dan Abramov",
+      "number": "12-43-234345",
+      "id": 3
+    },
+    {
+      "name": "Mary Poppendieck",
+      "number": "39-23-6423122",
+      "id": 4
+    },
+    {
+      "name": "Mikko",
+      "number": "123 - 434564",
+      "id": 5
+    },
+    {
+      "name": "Antti",
+      "number": "321 - 456789",
+      "id": 6
+    },
+    {
+      "name": "Helmi",
+      "number": "123- 123123",
+      "id": 10
+    },
+    {
+      "name": "Matti",
+      "number": "321 - 12312312",
+      "id": 11
+    },
+    {
+      "name": "Milla",
+      "number": "312 - 123123",
+      "id": 12
+    },
+    {
+      "name": "Ilmari",
+      "number": "050 -456456",
+      "id": 13
+    }
+  ]
+}

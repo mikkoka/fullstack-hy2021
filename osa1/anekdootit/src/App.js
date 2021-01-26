@@ -35,9 +35,10 @@ const App = () => {
         <button onClick={addVote}>vote</button>
         <button onClick={() => setSelected(randomIndex(selected))}>next anecdote</button>
       </h4>
-      <h1>anecdote with most votes</h1>
-        <h4>{anecdotes[favorite]}<br/>
-        has {votes[favorite]} votes</h4>
+    <h1>anecdote with most votes</h1>
+      <h4>{anecdotes[favorite]}<br/>
+        has {votes[favorite]} votes
+      </h4>
     </>
   )
 }
