@@ -34,7 +34,7 @@ const App = () => {
     setNotificationStyle(style)
     setTimeout(() => {
       setNotificationMessage('')
-    setNotificationStyle(null)
+      setNotificationStyle(null)
     }, 5000)
   }
 
@@ -93,12 +93,14 @@ const App = () => {
     personService.post(newPerson)
     .then(newP => {
       setPersons(persons.concat(newP))
-      setNewName('')
-      setNewNumber('')
       notify(`${newP.name} successfully added`, successStyle)
+    }).catch(err => {
+      notify(`${err.response.data}`, errorStyle)
     })
-  
+    setNewName('')
+    setNewNumber('')
   }
+  
   const deleteEntry = (i, name) => {
     const goOn = window.confirm(`Confirm deletion of entry for ${name}?`)
     if(goOn) {
@@ -158,15 +160,9 @@ const PersonForm = ({addNewEntry, newName, newNumber, onNameInput, onNumberInput
     <div>
       <h2>Add new number</h2>
       <form onSubmit={addNewEntry}>
-        <div>
-          name: <input value={newName} onChange={onNameInput}/>
-        </div>
-        <div>
-          number: <input value={newNumber} onChange={onNumberInput}/>
-        </div>
-        <div>
+          name: <input value={newName} onChange={onNameInput}/><br/>
+          number: <input value={newNumber} onChange={onNumberInput}/><br/>
           <button type="submit">add</button>
-        </div>
       </form>
     </div>
   )
@@ -175,8 +171,7 @@ const PersonForm = ({addNewEntry, newName, newNumber, onNameInput, onNumberInput
 const Numbers = ({filterString, filterPersons, deleteEntry}) => {
   return (
     <div>
-
-<h2>Numbers</h2>
+      <h2>Numbers</h2>
       {filterPersons(filterString).map(p => <p key={p.name}>{p.name} {p.number} <button onClick={() => deleteEntry(p.id, p.name)}>Delete</button></p>)}
     </div>
   )

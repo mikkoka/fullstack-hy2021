@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 
-const baseUrl = 'http://localhost:3001/persons'
+const baseUrl = 'http://localhost:3001/api/persons'
 
 
 const getAll = () => {
@@ -14,7 +14,9 @@ const getAll = () => {
 const post = newPerson => {
   return axios
     .post(baseUrl, newPerson)
-    .then(resp => resp.data)  
+    .then(resp => {
+      return resp.data
+    })
 }
 
 const deletePerson = id => {
