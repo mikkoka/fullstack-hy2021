@@ -1,0 +1,10 @@
+PUT http://localhost:3003/api/blogs/6033ee47f0fd8cdb033c3b79
+Content-Type: application/json
+
+{
+  "title": "Ville knows other shit, too",
+  "author": "Ville",
+  "url": "google.com",
+  "likes": 13,
+  "id": "6033ee47f0fd8cdb033c3b79"
+}
