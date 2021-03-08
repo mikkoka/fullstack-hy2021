@@ -5,7 +5,7 @@ const login = async credentials => {
   console.log('creds' ,credentials)
 
   const response = axios.post('http://localhost:3003/api/login/', credentials)
-  // console.log(response.data) // ALWAYS 'undefined'!!!
+  console.log(response.data) // ALWAYS 'undefined'!!!
   return response.data
 
   // return {

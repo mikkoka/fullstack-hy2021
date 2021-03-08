@@ -63,6 +63,7 @@ const App = () => {
         password,
       })
       console.log(u)
+      debugger // eslint-disable-line no-debugger
       setUser(u)
       blogService.setToken(u.token)
       window.localStorage.setItem(
@@ -92,14 +93,14 @@ const App = () => {
 
 
 
-  useEffect(() => {
-    const loggedUserJSON = window.localStorage.getItem('loggedBlogappUser')
-    if (loggedUserJSON) {
-      const user = JSON.parse(loggedUserJSON)
-      setUser(user)
-      blogService.setToken(user.token)
-    }
-  }, [])
+  // useEffect(() => {
+  //   const loggedUserJSON = window.localStorage.getItem('loggedBlogappUser')
+  //   if (loggedUserJSON) {
+  //     const user = JSON.parse(loggedUserJSON)
+  //     setUser(user)
+  //     blogService.setToken(user.token)
+  //   }
+  // }, [])
 
 
   if (!user)
