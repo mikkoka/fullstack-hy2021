@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/blogs HTTP/1.1
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1haGFrYXMiLCJpZCI6IjYwMzQwZTJkOTgzNWZlZjQ5MWI2N2ZkOCIsImlhdCI6MTYxNDAyNjQ3Nn0.B2pzQ0DwfNLwngZuOJuhCFWVCxkHlYFIE7tIEMN1PYU
+
+{
+  "title": "Ville knows other stuff, too, very, very, very, very, very much",
+  "author": "Ville",
+  "url": "google.com",
+  "likes": 14,
+  "user": "6033fd1493325de7bf6609c4"
+}
